@@ -3,6 +3,7 @@ import imutils
  
 # 加载摄像头
 cap = cv2.VideoCapture(0)
+print(cv2.getBuildInformation())
 
 if not cap.isOpened():
     print("无法打开摄像头")
