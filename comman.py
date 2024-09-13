@@ -1,10 +1,11 @@
 import cv2
 import imutils
- 
+import time
+
 # 加载摄像头
 cap = cv2.VideoCapture(0)
 print(cv2.getBuildInformation())
-
+time.sleep(2)  # 等待摄像头初始化
 if not cap.isOpened():
     print("无法打开摄像头")
  
