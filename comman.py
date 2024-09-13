@@ -16,6 +16,13 @@ num_people = 0
 while True:
     # 读取摄像头数据
     ret, frame = cap.read()
+    
+    ret, frame = cap.read()
+    if frame is None:
+        print("没有捕获到图像")
+    else:
+        # 处理图像
+        print(frame.shape)
  
     # 调整图像大小
     frame = imutils.resize(frame, width=500)
