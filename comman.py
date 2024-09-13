@@ -3,6 +3,9 @@ import imutils
  
 # 加载摄像头
 cap = cv2.VideoCapture(0)
+
+if not cap.isOpened():
+    print("无法打开摄像头")
  
 # 创建人脸检测器
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
